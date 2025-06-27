@@ -135,6 +135,21 @@
       text-decoration: underline;
       font-weight: bold;
     }
+    .wide-image-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 0 0 40px 0;
+    }
+    .wide-image {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      object-fit: cover;
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -143,6 +158,10 @@
     <h2>Project Description:</h2>
     <h1>Over the summer of 2025 I am aiming to launch a FREE personal consulting initiative aimed at supporting small businesses in the Minneapolis area. The goal is to apply structured problem solving, customer insight, and operational analysis to help local business owners identify actionable strategies for growth.</h1>
   </header>
+
+  <div class="wide-image-container">
+    <img src="image2.png" alt="Consulting Banner" class="wide-image">
+  </div>
 
   <section class="services">
     <h2>Services</h2>
@@ -202,4 +221,5 @@
     <p>Phone: <a href="tel:19362078693">(936) 207-8693</a></p>
   </footer>
 </body>
+</html>
 </html>
