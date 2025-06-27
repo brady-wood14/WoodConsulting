@@ -150,6 +150,54 @@
       object-fit: cover;
       display: block;
     }
+    @media (max-width: 900px) {
+      .about {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 10px;
+      }
+      .about img {
+        width: 90vw;
+        max-width: 340px;
+        height: auto;
+        margin: 0 0 24px 0;
+      }
+      .about p {
+        max-width: 95vw;
+        padding: 0 2vw;
+      }
+      .expect, .services {
+        padding: 30px 5vw;
+        max-width: 98vw;
+      }
+      .wide-image {
+        max-width: 98vw;
+      }
+    }
+    @media (max-width: 600px) {
+      .main-header {
+        font-size: 1.5rem;
+        padding: 18px 0 10px 0;
+      }
+      header h1 {
+        font-size: 1.1rem;
+        max-width: 95vw;
+      }
+      .about img {
+        width: 90vw;
+        max-width: 220px;
+      }
+      .about p {
+        font-size: 0.98rem;
+      }
+      .step {
+        font-size: 0.98rem;
+        padding: 16px 8px;
+      }
+      .expect h2, .about h2, .services h2 {
+        font-size: 1.2rem !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -160,7 +208,7 @@
   </header>
 
   <div class="wide-image-container">
-    <img src="image3.png" alt="Consulting Banner" class="wide-image">
+    <img src="image2.png" alt="Consulting Banner" class="wide-image">
   </div>
 
   <section class="services">
@@ -221,5 +269,4 @@
     <p>Phone: <a href="tel:19362078693">(936) 207-8693</a></p>
   </footer>
 </body>
-</html>
 </html>
