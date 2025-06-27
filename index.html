@@ -5,22 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brady Wood Consulting</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; background: #fffbe6; }
-    h1 { color: #333; }
-    .container { max-width: 700px; margin: auto; background: white; padding: 30px; border-radius: 8px; }
-    a.button { background: #0077cc; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-color: #fdfaf6;
+      color: #2a2a2a;
+      line-height: 1.6;
+    }
+    header {
+      padding: 60px 20px 20px;
+      text-align: center;
+    }
+    header h2 {
+      font-size: 20px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      font-size: 26px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .services {
+      background-color: #d5b9a3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .services h2 {
+      margin-bottom: 20px;
+    }
+    .services ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      max-width: 700px;
+    }
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .about img {
+      width: 250px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+    .about p {
+      max-width: 700px;
+      padding: 0 20px;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Brady Wood Consulting</h1>
-    <p>I help small businesses grow through strategy, operations, and creative problem-solving. Based in Minneapolis, I offer short-term, high-impact consulting services this summer.</p>
-    <section class="project-description">
-      <h2>Project Description</h2>
-      <p>Over the summer of 2025 I am aiming to launch a FREE personal consulting initiative aimed at supporting small businesses in the Minneapolis area. The goal is to apply structured problem solving, customer insight, and operational analysis to help local business owners identify actionable strategies for growth.</p>
-    </section>
-    <p>Email me: <a href="mailto:your@email.com">your@email.com</a></p>
-    <p><a class="button" href="https://calendly.com">Book a Free Consultation</a></p>
-  </div>
+  <header>
+    <h2>Project Description:</h2>
+    <h1>Over the summer of 2025 I am aiming to launch a FREE personal consulting initiative aimed at supporting small businesses in the Minneapolis area. The goal is to apply structured problem solving, customer insight, and operational analysis to help local business owners identify actionable strategies for growth.</h1>
+  </header>
+
+  <section class="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Identify paths to increase revenue, expand market reach, or improve customer retention.</li>
+      <li>Analyze workflows to uncover bottlenecks in processes and find cost-saving opportunities.</li>
+      <li>Assess online footprint and provide informed strategies to boost engagement and visibility.</li>
+    </ul>
+  </section>
+
+  <section class="about">
+    <img src="brady-profile.jpg" alt="Brady Wood">
+    <p><strong>Brady Wood</strong><br><br>
+    I’ve led 30-mile backpacking trips through freezing rain in Ouachita National Forest and Big Bend National Park, constructed cost models for multimillion-dollar energy plants, and built a simulated human circulatory system for cardiac research — all before finishing my undergrad.
+    <br><br>
+    I am a rising senior Mechanical Engineering student at Texas A&M, incoming MBA candidate, and aspiring strategy consultant. My experience ranges from bridging cross-cultural teams between France and America, to helping old lady’s cross the street. I have never turned down a problem solving opportunity before, and I don’t intend on doing so now.
+    <br><br>
+    This summer, I launched an independent consulting initiative in Minneapolis to help local businesses improve operations, customer experience, and growth strategies. I bring the same discipline and drive I’ve applied on mountain-tops, in research labs, and in the office to every client I work with.
+    <br><br>
+    My goal: help you reach your business goals no matter how big or small.
+    <br><br>
+    ALL FOR FREE
+    </p>
+  </section>
 </body>
 </html>
