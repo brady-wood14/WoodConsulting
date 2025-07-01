@@ -300,6 +300,31 @@
       .expect h2, .about h2, .services h2 {
         font-size: 1.2rem !important;
       }
+      .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+        height: auto;
+        padding: 0;
+      }
+      .main-nav li {
+        width: 100%;
+        border-bottom: 1px solid #f3ede6;
+      }
+      .main-nav li:last-child {
+        border-bottom: none;
+      }
+      .main-nav a {
+        font-size: 1rem;
+        padding: 12px 0;
+        text-align: center;
+        width: 100%;
+        border-radius: 0;
+        background: #fff;
+      }
+      .main-nav {
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      }
     }
   </style>
   <script>
