@@ -4,45 +4,196 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wood Consulting</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
-      font-family: Georgia, serif;
-      background-color: #fdfaf6;
-      color: #2a2a2a;
-      line-height: 1.6;
+      font-family: 'Lato', Arial, sans-serif;
+      background-color: #f7f8fa;
+      color: #23272f;
+      line-height: 1.7;
+    }
+    .main-nav {
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-radius: 0 0 12px 12px;
+      padding: 0;
+    }
+    .main-nav ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      gap: 32px;
+      height: 56px;
+    }
+    .main-nav li {
+      margin: 0;
+      padding: 0;
+    }
+    .main-nav a {
+      color: #7c5e3c;
+      text-decoration: none;
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.08rem;
+      letter-spacing: 1px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+      display: block;
+    }
+    .main-nav a:hover, .main-nav a:focus {
+      background: #f3ede6;
+      color: #3a2c1a;
+    }
+    .main-header {
+      width: 100%;
+      background: linear-gradient(90deg, #3a2c1a 0%, #7c5e3c 100%);
+      color: #fff;
+      text-align: center;
+      padding: 48px 0 28px 0;
+      font-family: 'Merriweather', serif;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      margin-bottom: 0;
+      border-radius: 0 0 18px 18px;
     }
     header {
-      padding: 18px 20px 10px;
+      padding: 24px 24px 10px;
       text-align: center;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      margin: 32px auto 0 auto;
+      max-width: 900px;
     }
     header h2 {
-      font-size: 20px;
-      font-weight: normal;
+      font-size: 1.2rem;
+      font-weight: 700;
       margin-bottom: 10px;
+      color: #7c5e3c;
+      letter-spacing: 1px;
+      font-family: 'Merriweather', serif;
     }
     header h1 {
-      font-size: 26px;
-      max-width: 700px;
+      font-size: 1.4rem;
+      max-width: 800px;
       margin: 0 auto;
+      font-weight: 400;
+      color: #23272f;
+    }
+    .wide-image-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 32px 0 40px 0;
+    }
+    .wide-image {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+      object-fit: cover;
+      display: block;
+      border: 1.5px solid #e0d6c3;
     }
     section {
-      padding: 40px 20px;
+      padding: 48px 24px;
     }
     .services {
-      background-color: #d5b9a3;
+      background: #f3ede6;
       display: flex;
       flex-direction: column;
       align-items: center;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      margin: 0 auto 32px auto;
+      max-width: 900px;
+      border: 1.5px solid #e0d6c3;
     }
     .services h2 {
       margin-bottom: 20px;
+      font-family: 'Merriweather', serif;
+      color: #3a2c1a;
+      font-size: 2rem;
+      letter-spacing: 1px;
     }
     .services ul {
       list-style-type: disc;
-      padding-left: 20px;
+      padding-left: 24px;
       max-width: 700px;
+      font-size: 1.08rem;
+    }
+    .services li {
+      margin-bottom: 12px;
+      transition: color 0.2s;
+    }
+    .services li:hover {
+      color: #7c5e3c;
+    }
+    .expect {
+      background: #fff;
+      margin: 0 auto 40px auto;
+      max-width: 900px;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      padding: 48px 24px 36px 24px;
+      text-align: center;
+      border: 1.5px solid #e0d6c3;
+    }
+    .expect h2 {
+      margin-bottom: 32px;
+      font-size: 2rem;
+      color: #7c5e3c;
+      letter-spacing: 1px;
+      font-family: 'Merriweather', serif;
+    }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+    .step {
+      background: #f7f8fa;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+      padding: 28px 32px;
+      margin: 0 0 0 0;
+      max-width: 650px;
+      width: 100%;
+      text-align: left;
+      font-size: 1.08rem;
+      border: 1px solid #e0d6c3;
+      margin-bottom: 10px;
+      transition: box-shadow 0.2s;
+    }
+    .step strong {
+      color: #3a2c1a;
+      font-family: 'Merriweather', serif;
+      font-size: 1.1rem;
+    }
+    .step:hover {
+      box-shadow: 0 4px 16px rgba(124,94,60,0.10);
+    }
+    .arrow {
+      font-size: 2.2rem;
+      color: #b89b6a;
+      margin: 8px 0 8px 0;
+      text-align: center;
     }
     .about {
       display: flex;
@@ -52,110 +203,61 @@
       justify-content: flex-start;
       max-width: 1000px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 48px 24px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border: 1.5px solid #e0d6c3;
     }
     .about img {
       width: 320px;
       height: 320px;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-bottom: 0;
       margin-right: 40px;
       margin-left: 0;
       object-fit: cover;
       box-shadow: 0 4px 16px rgba(0,0,0,0.10);
       display: block;
+      border: 1.5px solid #e0d6c3;
     }
     .about p {
       max-width: 600px;
       padding: 0;
       margin: 0;
       align-self: center;
-    }
-    .main-header {
-      width: 100%;
-      background: #7c5e3c;
-      color: #fff;
-      text-align: center;
-      padding: 38px 0 20px 0;
-      font-family: 'Merriweather', 'Georgia', serif;
-      font-size: 3.2rem;
-      letter-spacing: 2px;
-      font-weight: 700;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      margin-bottom: 0;
-    }
-    .expect {
-      background: #f5e8d7;
-      margin: 0 auto 40px auto;
-      max-width: 900px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-      padding: 40px 20px 30px 20px;
-      text-align: center;
-    }
-    .expect h2 {
-      margin-bottom: 32px;
-      font-size: 2rem;
-      color: #7c5e3c;
-      letter-spacing: 1px;
-    }
-    .steps {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0;
-    }
-    .step {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
-      padding: 24px 28px;
-      margin: 0 0 0 0;
-      max-width: 650px;
-      width: 100%;
-      text-align: left;
       font-size: 1.08rem;
     }
-    .arrow {
-      font-size: 2.2rem;
-      color: #b89b6a;
-      margin: 8px 0 8px 0;
-      text-align: center;
+    .about h2 {
+      margin-top:0;
+      color:#7c5e3c;
+      font-size:2rem;
+      font-family: 'Merriweather', serif;
     }
     .contact {
-      background: #7c5e3c;
+      background: linear-gradient(90deg, #3a2c1a 0%, #7c5e3c 100%);
       color: #fff;
       text-align: center;
-      padding: 36px 20px 28px 20px;
-      margin-top: 40px;
-      border-radius: 0 0 10px 10px;
+      padding: 40px 24px 32px 24px;
+      margin-top: 48px;
+      border-radius: 0 0 14px 14px;
       font-size: 1.15rem;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
     }
     .contact a {
       color: #ffe6b3;
       text-decoration: underline;
       font-weight: bold;
+      transition: color 0.2s;
     }
-    .wide-image-container {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin: 0 0 40px 0;
-    }
-    .wide-image {
-      width: 100%;
-      max-width: 1200px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      object-fit: cover;
-      display: block;
+    .contact a:hover {
+      color: #fff2d6;
     }
     @media (max-width: 900px) {
       .about {
         flex-direction: column;
         align-items: center;
-        padding: 30px 10px;
+        padding: 32px 10px;
       }
       .about img {
         width: 90vw;
@@ -168,7 +270,7 @@
         padding: 0 2vw;
       }
       .expect, .services {
-        padding: 30px 5vw;
+        padding: 32px 5vw;
         max-width: 98vw;
       }
       .wide-image {
@@ -181,7 +283,7 @@
         padding: 22px 0 12px 0;
       }
       header h1 {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         max-width: 95vw;
       }
       .about img {
@@ -200,19 +302,42 @@
       }
     }
   </style>
+  <script>
+    // Fallback for smooth scroll in older browsers
+    document.querySelectorAll('.main-nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  </script>
 </head>
 <body>
-  <div class="main-header">Wood Consulting</div>
-  <header>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#expect">What To Expect</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="main-header">Wood Consulting</div>
+    <header>
     <h2>Project Description:</h2>
-    <h1>As I enter my senior year of university, I am launching a FREE personal consulting project aimed at supporting businesses in Minneapolis and the surrounding area. The goal is to apply structured problem solving, customer insight, and operational analysis to help local business owners identify actionable strategies for growth.</h1>
+    <h1>As I enter my senior year of university, I am launching a FREE personal consulting project aimed at supporting businesses in the Minnesota area. The goal is to apply structured problem solving, customer insight, and operational analysis to help business owners identify actionable strategies for growth.</h1>
   </header>
 
   <div class="wide-image-container">
-    <img src="image2.png" alt="Consulting Banner" class="wide-image">
+    <img src="image3.png" alt="Consulting Banner" class="wide-image">
   </div>
 
-  <section class="services">
+  <section class="services" id="services">
     <h2>Services</h2>
     <ul>
       <li>Identify paths to increase revenue, expand market reach, or improve customer retention.</li>
@@ -221,11 +346,11 @@
     </ul>
   </section>
 
-  <section class="expect">
+  <section class="expect" id="expect">
     <h2>What to Expect</h2>
     <div class="steps">
       <div class="step">
-        <strong>Step 1: Initital Engagement</strong>
+        <strong>Step 1: Initial Engagement</strong>
         <p>We'll schedule a 1 hour call or in person meeting to learn more about your business, your goals, and the challenges you're facing.</p>
       </div>
       <div class="arrow">&#8595;</div>
@@ -246,10 +371,10 @@
     </div>
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
     <img src="image1.png" alt="Brady Wood">
     <div>
-      <h2 style="margin-top:0; color:#7c5e3c; font-size:2rem;">About Me</h2>
+      <h2>About Me</h2>
       <p><strong>Brady Wood</strong><br><br>
       I’ve led 30-mile backpacking trips through freezing rain in Ouachita National Forest and Big Bend National Park, constructed cost models for multimillion-dollar energy plants, and built a simulated human circulatory system for cardiac research — all before finishing my undergrad.
       <br><br>
@@ -264,7 +389,7 @@
     </div>
   </section>
 
-  <footer class="contact">
+  <footer class="contact" id="contact">
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:bradywood04@gmail.com">bradywood04@gmail.com</a></p>
     <p>Phone: <a href="tel:19362078693">(936) 207-8693</a></p>
