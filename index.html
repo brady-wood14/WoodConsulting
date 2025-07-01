@@ -318,8 +318,11 @@
         box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         min-height: 0;
       }
-      section, header {
-        scroll-margin-top: 80px;
+      section {
+        scroll-margin-top: 70px;
+      }
+      header {
+        scroll-margin-top: 0 !important;
       }
     }
     @media (max-width: 400px) {
@@ -335,12 +338,18 @@
       header {
         padding: 8px 2px 4px;
       }
-      section, header {
-        scroll-margin-top: 64px;
+      section {
+        scroll-margin-top: 56px;
+      }
+      header {
+        scroll-margin-top: 0 !important;
       }
     }
-    section, header {
+    section {
       scroll-margin-top: 110px;
+    }
+    header {
+      scroll-margin-top: 0;
     }
   </style>
   <script>
